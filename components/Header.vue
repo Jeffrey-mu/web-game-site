@@ -10,7 +10,7 @@ function formatConversion(str: string): string {
   <header class='flex bg-slate-900 text-white font-sans min-h-[70px] tracking-wide z-50 fixed top-0 left-0 right-0'>
     <div class='flex flex-wrap items-center justify-between px-10 py-3 gap-4 w-full'>
       <nuxt-link to="/" class="font-bold text-2xl flex gap-2 items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#b9fb01" d="M2 4.233L4.213 2L8 5.827l.013-.007l2.207 2.233v.014L8.013 10.3L8 10.293L4.213 14.12L2 11.887L5.793 8.06zm20 7.88L19.787 9.88L16 13.707l-.013-.007l-2.207 2.233v.014l2.207 2.233l.013-.007L19.787 22L22 19.767l-3.793-3.827zm-8 7.654L11.8 22L8 18.173L4.213 22L2 19.767l3.793-3.827l-.013-.007L8 13.7l.007.007l.013-.007l2.207 2.233v.007zM19.553 2l2.214 2.233L17.98 8.06l.007.007l-2.214 2.233l-.006-.007l-.014.007l-2.206-2.233l.006-.007L9.76 4.233L11.967 2l3.793 3.827L19.547 2z"/></svg>  Online Game
+        <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="#b9fb01" d="M2 4.233L4.213 2L8 5.827l.013-.007l2.207 2.233v.014L8.013 10.3L8 10.293L4.213 14.12L2 11.887L5.793 8.06zm20 7.88L19.787 9.88L16 13.707l-.013-.007l-2.207 2.233v.014l2.207 2.233l.013-.007L19.787 22L22 19.767l-3.793-3.827zm-8 7.654L11.8 22L8 18.173L4.213 22L2 19.767l3.793-3.827l-.013-.007L8 13.7l.007.007l.013-.007l2.207 2.233v.007zM19.553 2l2.214 2.233L17.98 8.06l.007.007l-2.214 2.233l-.006-.007l-.014.007l-2.206-2.233l.006-.007L9.76 4.233L11.967 2l3.793 3.827L19.547 2z"/></svg>  Online Game
       </nuxt-link>
 
 
