@@ -1,9 +1,17 @@
+<script setup lang="ts">
+import gameChannelNavigationListCollection from "~/assets/gameChannelNavigationListCollection.json"
+const route = useRoute()
+function formatConversion(str: string): string {
+  return str.toLowerCase().replace(' ', '-')
+}
+</script>
 <template>
 
-  <header
-    class='flex bg-slate-900 text-white font-sans min-h-[70px] tracking-wide z-50 fixed top-0 left-0 right-0'>
+  <header class='flex bg-slate-900 text-white font-sans min-h-[70px] tracking-wide z-50 fixed top-0 left-0 right-0'>
     <div class='flex flex-wrap items-center justify-between px-10 py-3 gap-4 w-full'>
-      <nuxt-link to="/">games</nuxt-link>
+      <nuxt-link to="/" class="font-bold text-2xl flex gap-2 items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="#b9fb01" d="M2 4.233L4.213 2L8 5.827l.013-.007l2.207 2.233v.014L8.013 10.3L8 10.293L4.213 14.12L2 11.887L5.793 8.06zm20 7.88L19.787 9.88L16 13.707l-.013-.007l-2.207 2.233v.014l2.207 2.233l.013-.007L19.787 22L22 19.767l-3.793-3.827zm-8 7.654L11.8 22L8 18.173L4.213 22L2 19.767l3.793-3.827l-.013-.007L8 13.7l.007.007l.013-.007l2.207 2.233v.007zM19.553 2l2.214 2.233L17.98 8.06l.007.007l-2.214 2.233l-.006-.007l-.014.007l-2.206-2.233l.006-.007L9.76 4.233L11.967 2l3.793 3.827L19.547 2z"/></svg>  Online Game
+      </nuxt-link>
 
 
       <div id="collapseMenu"
@@ -25,22 +33,16 @@
             <a href="javascript:void(0)"><img src="https://readymadeui.com/readymadeui.svg" alt="logo" class='w-36' />
             </a>
           </li>
-          <li class='max-lg:border-b max-lg:py-3'>
-            <nuxt-link to="/" class='hover:text-blue-600 text-[15px] font-bold text-blue-600 block'>Home</nuxt-link>
-          </li>
-          <li class='max-lg:border-b max-lg:py-3'>
-            <nuxt-link to="/" class='hover:text-blue-600 text-[15px] font-bold block'>Team</nuxt-link>
-          </li>
-          <li class='max-lg:border-b max-lg:py-3'>
-            <nuxt-link to="/" class='hover:text-blue-600 text-[15px] font-bold block'>About</nuxt-link>
-          </li>
-          <li class='max-lg:border-b max-lg:py-3'>
-            <nuxt-link to="/" class='hover:text-blue-600 text-[15px] font-bold block'>Contact</nuxt-link>
+          <li v-for="item in gameChannelNavigationListCollection.slice(0, 6)" :key="item.label">
+            <nuxt-link :to="formatConversion(item.label)" class="flex items-center p-4 gap-2 text-white hover:text-blue-600 text-[15px] font-bold"
+              :style="{ color: formatConversion(item.label) === route.path.slice(1) ? '#A48EFF' : '' }">
+              <img :src="item.img" alt=""> <span class="text-sm" style="">{{ item.label }}</span>
+            </nuxt-link>
           </li>
         </ul>
       </div>
 
-      <div class='flex items-center space-x-8 max-lg:ml-auto'>
+      <nuxt-link to="/like" class='flex items-center space-x-8 max-lg:ml-auto'>
         <span class="relative">
           <svg xmlns="http://www.w3.org/2000/svg" width="20px"
             class="cursor-pointer fill-[#fff] hover:fill-[#007bff] inline" viewBox="0 0 64 64">
@@ -66,7 +68,7 @@
               clip-rule="evenodd"></path>
           </svg>
         </button>
-      </div>
+      </nuxt-link to="/like">
     </div>
   </header>
 </template>
