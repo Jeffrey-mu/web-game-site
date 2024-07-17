@@ -10,5 +10,4 @@ const paly = route.params.paly as string
   </div class="m-auto">
 </template>
 <style>
-
 </style>

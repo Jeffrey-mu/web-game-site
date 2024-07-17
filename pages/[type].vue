@@ -10,7 +10,7 @@ const video = ref("")
   <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-4 p-6">
     <li class="bg-gray-800 rounded-lg game-card cursor-pointer relative overflow-hidden" v-for="item in randerGameList"
       :key="item.gameThumbImage" @mousemove="video = item.video" @mouseleave="video = ''">
-      <nuxt-link :to="'/play-' + item.gameThumbTitleContainer.toLowerCase().replace(/ /g, '-').replace(':', '')"
+      <nuxt-link :to="'/play-' + item.href.split('/game/')[1]"
         class="flex items-center p-1 gap-1 flex-col">
         <video class="rounded-lg" width="100%" autoplay="true" loop="true" muted="true" v-if="video === item.video">
           <source :src="video" type="video/mp4">
