@@ -30,7 +30,7 @@ function formatConversion(str: string): string {
         <ul
           class='lg:flex lg:gap-x-10 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
           <li class='mb-6 hidden max-lg:block'>
-            <a href="javascript:void(0)"><img src="https://readymadeui.com/readymadeui.svg" alt="logo" class='w-36' />
+            <a href="javascript:void(0)"><img src="https://readymadeui.online/readymadeui.svg" alt="logo" class='w-36' />
             </a>
           </li>
           <li v-for="item in gameChannelNavigationListCollection.slice(0, 6)" :key="item.label">
